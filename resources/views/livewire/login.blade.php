@@ -3,15 +3,15 @@
         <div class="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Login To Your Account</div>
         <div class="mt-10">
             <form wire:submit="login">
-                <x-form.cover for="email" label="E-Mail Address:">
-                    <x-form.text id="email" type="email" wire:model="email" placeholder="Email">
+                <x-form.cover for="email" label="E-Mail Address:" :error="$errors->first('email')">
+                    <x-form.text id="email" type="email" wire:model.live.debounce="email" placeholder="Email">
                         <x-slot:icon>
                             <x-icons.at-sign class="w-6 h-6" />
                         </x-slot:icon>
                     </x-form.text>
                 </x-form.cover>
-                <x-form.cover for="password" label="Password:">
-                    <x-form.text id="password" type="password" wire:model="password" placeholder="...">
+                <x-form.cover for="password" label="Password:" :error="$errors->first('password')">
+                    <x-form.text id="password" type="password" wire:model.live.debounce="password" placeholder="...">
                         <x-slot:icon>
                             <x-icons.lock class="w-6 h-6" />
                         </x-slot:icon>
