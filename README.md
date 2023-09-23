@@ -12,6 +12,8 @@ composer install
 npm install
 ```
 
+create database.sqlite in database directory
+
 ## Running Application
 
 ```

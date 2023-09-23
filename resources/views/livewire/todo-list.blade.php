@@ -42,7 +42,7 @@
 
         <div class="lg:flex justify-between lg:space-x-6 space-y-6 lg:space-y-0 w-11/12 md:w-1/2 lg:w-10/12 mx-auto">
             @foreach(['open' => 'openTasks', 'done' => 'doneTasks'] as $key => $item)
-                <div class="grow bg-white rounded-lg p-4">
+                <div class="lg:w-1/2 bg-white rounded-lg p-4">
                     <p class="text-xl font-semibold mt-2 text-blue-900 capitalize">{{ $key }} Task</p>
                     <ul class="my-4 text-gray-300">
                         @forelse($$item as $task)
@@ -52,16 +52,17 @@
                                             <div wire:click="markAsDone({{ $task->id }})"
                                                 class="w-9/12 h-12 bg-slate-700 text-slate-400 rounded-[7px] flex justify-start items-center px-3 group cursor-pointer">
                                                 <x-icons.check-circle class="w-6 h-6 group-hover:text-green-600 transition-all" />
-                                                <span class="text-sm ml-4 text-slate-400 group-hover:line-through font-semibold">{{ $task->task }}</span>
+                                                <span class="text-sm ml-4 group-hover:line-through font-semibold">{{ $task->task }}</span>
                                             </div>
                                         @else
                                             <div wire:click="delete({{ $task->id }})"
-                                                 class="w-9/12 h-12 bg-slate-700 text-slate-400 rounded-[7px] flex justify-start items-center px-3 group cursor-pointer">
-                                                <x-icons.check-circle class="w-6 h-6 group-hover:text-green-600 transition-all" />
-                                                <span class="text-sm ml-4 text-slate-400 group-hover:line-through font-semibold">{{ $task->task }}</span>
+                                                 class="w-9/12 h-12 bg-slate-700 rounded-[7px] flex justify-start items-center px-3 group cursor-pointer">
+                                                <x-icons.check-circle class="w-6 h-6 text-green-600 group-hover:hidden transition-all" />
+                                                <x-icons.trash class="w-6 h-6 text-red-500 hidden group-hover:inline-block transition-all" />
+                                                <span class="text-sm ml-4 group-hover:line-through font-semibold">{{ $task->task }}</span>
                                             </div>
                                         @endif
-                                    <div class="w-1/4 h-12 bg-slate-700 rounded-[7px] flex justify-center text-sm text-slate-400 items-center">
+                                    <div class="w-1/4 h-12 bg-slate-700 rounded-[7px] flex justify-center text-xs font-semibold text-slate-400 items-center">
                                         <div class="text-center">
                                             @if($key == 'open')
                                                 {{ $task->created_at->format('M.d.Y') }} <br>

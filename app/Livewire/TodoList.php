@@ -56,10 +56,8 @@ class TodoList extends Component
 
     public function delete(Todo $todo): bool
     {
-        $todo->status = 'done';
-        $todo->save();
-//        refresh open & done task
-        $this->getOpenTasks();
+        $todo->delete();
+//        refresh done task
         $this->getDoneTasks();
 
         return true;
