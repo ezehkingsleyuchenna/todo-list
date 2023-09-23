@@ -12,7 +12,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('auth')->group(function () {
+    Route::get('/', \App\Livewire\TodoList::class)->name('list');
+    Route::get('/logout', function () {
+        auth()->logout();
+        return redirect()->route('login');
+    })->name('logout');
 });
+
+
+Route::get('/login', \App\Livewire\Login::class)->name('login');
+Route::get('/signup', \App\Livewire\Signup::class)->name('signup');

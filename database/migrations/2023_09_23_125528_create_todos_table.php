@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('task');
             $table->enum('status', ['open', 'done'])->default('open');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
