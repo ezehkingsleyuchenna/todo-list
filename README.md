@@ -13,6 +13,7 @@ git clone https://github.com/ezehkingsleyuchenna/todolist.git
 composer install
 ```
 **Create .env file on the root folder**
+
 **Copy env data from .env.example**
 
 ```
