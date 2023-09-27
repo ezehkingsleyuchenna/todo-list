@@ -11,15 +11,18 @@ git clone https://github.com/ezehkingsleyuchenna/todolist.git
 ```
 ```
 composer install
-```
-```
-npm install
+php artisan key:generate
 ```
 
 **Create database.sqlite in database directory**
 
 ```
 php artisan migrate
+```
+
+## NPM
+```
+npm install
 ```
 
 ## Running Application
