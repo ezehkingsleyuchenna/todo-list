@@ -13,7 +13,7 @@ This a simple todo list application.
 ## Installing
 
 ```
-git clone https://github.com/ezehkingsleyuchenna/todolist.git
+git clone https://github.com/ezehkingsleyuchenna/todo-list.git
 composer install
 ```
 
