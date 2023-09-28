@@ -1,9 +1,11 @@
 # Todo List
 
 ## Introduction
+
 This a simple todo list application.
 
 ### Dependencies
+
 - PHP `^v8.1`
 - Composer `^v2`
 - Node.js
@@ -28,19 +30,22 @@ php artisan key:generate
 ```
 
 ### Database
-**Create `database.sqlite` in database directory**
+
+- **Create `database.sqlite` in database directory**
 
 ### Migrate tables
+
 ```
 php artisan migrate
 ```
 
 ### NPM
+
 ```
 npm install
 ```
 
-### Running Application
+### Run Application
 
 ```
 npm run dev
