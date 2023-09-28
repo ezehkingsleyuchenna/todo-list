@@ -1,37 +1,42 @@
 # Todo List
 
 ## System Requirements
-- PHP **V8**
-- Composer **^V2**
+- PHP `v8.1`
+- Composer `^v2`
 
 ## Installation
 
 ```
 git clone https://github.com/ezehkingsleyuchenna/todolist.git
-```
-```
 composer install
 ```
-**Create .env file on the root folder**
 
-**Copy env data from .env.example**
+### Environment file
+
+- **Create `.env` file in the root folder**
+
+- **Copy `.env` data from `.env.example`**
+
+### Generate App key
 
 ```
 php artisan key:generate
 ```
 
-**Create database.sqlite in database directory**
+### Database
+**Create `database.sqlite` in database directory**
 
+### Migrate tables
 ```
 php artisan migrate
 ```
 
-## NPM
+### NPM
 ```
 npm install
 ```
 
-## Running Application
+### Running Application
 
 ```
 npm run dev
