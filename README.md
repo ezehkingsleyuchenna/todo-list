@@ -1,10 +1,14 @@
 # Todo List
 
-## System Requirements
+## Introduction
+This a simple todo list application.
+
+### Dependencies
 - PHP `^v8.1`
 - Composer `^v2`
+- Node.js
 
-## Installation
+## Installing
 
 ```
 git clone https://github.com/ezehkingsleyuchenna/todolist.git
