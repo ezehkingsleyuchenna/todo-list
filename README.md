@@ -1,7 +1,7 @@
 # Todo List
 
 ## System Requirements
-- PHP `v8.1`
+- PHP `^v8.1`
 - Composer `^v2`
 
 ## Installation
